@@ -7,8 +7,8 @@ var db = require("../models");
 var router = express.Router();
 
 //MongoDB
-var MONGODB = process.env.MONGODB || "mongodb://localhost/courrier_itl_DB";
-mongoose.connect(MONGODB, { useNewUrlParser: true, useCreateIndex : true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/courrier_itl_DB";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useCreateIndex : true });
 
 //Routing and functions
 router.get("/", function (req, res) {
