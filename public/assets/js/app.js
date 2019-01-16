@@ -1,8 +1,6 @@
 $(".scrapeNewsBtn").on("click", () => {
-    $(".loadingDiv").show();
     $.get("/api/scrape", function (data) {
         location.reload("/");
-        $(".loadingDiv").hide();
     });
 })
 
