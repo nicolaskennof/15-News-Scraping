@@ -10,7 +10,7 @@ Web app that lets users view and leave comments on the latest news.
 News Scraping is about getting news from www.courrierinternational.com and be able to save articles that are relevant to the user and giving him the ability of writting notes linked to those saved articles.
 
 ###========== 2. How to get started? ==========
-Please visit  and submit your answers!
+Please visit https://courrier-scraping.herokuapp.com/ and submit your answers!
 
 ###========== 3. Who maintains and contributes? ==========
 Nicolas Kennof is the main contributor to this project.
