@@ -1,0 +1,36 @@
+<div class="container p-0 text-center">
+    {{#each articles}}
+    <div class="card imageContainer mb-2" style="width: 18rem;">
+        <img class="card-img-top" src={{this.img}} alt="article picture">
+        <div class="card-body">
+            <h5 class="card-title"><b>{{this.source}}</b></h5>
+            <p class="card-text">{{this.title}}</p>
+            <p class="card-date"><i>{{this.time}}</i></p>
+            <button data-id={{this._id}} class="btn btn-secondary notesBtn" target="_blank"><i class="fas fa-pen"></i></button>
+            <button data-id={{this._id}} class="btn btn-danger deleteFromSaveBtn"><i class="fas fa-ban"></i></button>
+        </div>
+    </div>
+    {{/each}}
+    <div id="notes-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"><strong>Notes</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <div id="savedNotes">
+                    </div>
+                    <hr>
+                    <p>New note</p>
+                    <div class="p-0 text-right col-12">
+                        <textarea id="noteText" class="mb-2" style="width:100%"></textarea>
+                        <button id="saveNoteBtn" style="text-align: right" class="btn btn-dark">Save Note</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

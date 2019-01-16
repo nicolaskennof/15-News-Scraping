@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/js/bootbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>News from Around the World</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="fixed-top">
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <div class="logo">
+                    <a href="/"><img src="assets/img/planet-earth.png" alt="logo"></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/saved">Your Saved Articles</a></li>
+                        {{#if this.page}}
+                        <li><button class="scrapeNewsBtn btn btn-success">Scrape the News</button></li>
+                        <li><button id="clearArticlesBtn" class="btn btn-warning">Clear Unsaved Articles</button></li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+        </div>
+    </div>
+    {{{ body }}}
+    <script src="/assets/js/app.js"></script>
+</body>
+
+</html>

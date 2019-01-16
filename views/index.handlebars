@@ -1,0 +1,27 @@
+<div class="text-center">
+    <div class="loadingDiv text-center" style="display:none">
+        <img src="assets/img/loading.gif">
+    </div>
+    {{#unless articles}}
+    <div style="height:100%; width:100%;" class=" text-center noItemsContainer">
+        <div class="row">
+            <div class="col-12">
+                <button class="scrapeNewsBtn btn btn-success"><span style="font-size: 30px">Be the first to scrape<br>the
+                        news!</span></button>
+            </div>
+        </div>
+    </div>
+    {{/unless}}
+    {{#each articles}}
+    <div class="card imageContainer mb-2" style="width: 18rem;">
+        <img class="card-img-top" src={{this.img}} alt="article picture">
+        <div class="card-body">
+            <h5 class="card-title"><b>{{this.source}}</b></h5>
+            <p class="card-text">{{this.title}}</p>
+            <p class="card-date"><i>{{this.time}}</i></p>
+            <a href={{this.link}} class="btn btn-primary" target="_blank"><i class="far fa-eye"></i></a>
+            <button data-id={{this._id}} class="btn btn-info saveArticleBtn"><i class="fas fa-save"></i></button>
+        </div>
+    </div>
+    {{/each}}
+</div>
